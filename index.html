@@ -26,29 +26,153 @@
   </head>
 
   <body>
-    <!-- Start your project here-->
-    <div class="container">
-      <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
-        <div class="text-center">
-          <img
-            class="mb-4"
-            src="https://mdbootstrap.com/img/logo/mdb-transparent-250px.png"
-            style="width: 250px; height: 90px"
-          />
-          <h5 class="mb-3">Thank you for using our product. We're glad you're with us.</h5>
-          <p class="mb-3">MDB Team123.2</p>
-          <a
-            data-mdb-ripple-init
-            class="btn btn-primary btn-lg"
-            href="https://mdbootstrap.com/docs/standard/getting-started/"
-            target="_blank"
-            role="button"
-            >Start MDB tutorial</a
-          >
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>瑞豐夜市 - 線上點餐</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- MDBootstrap 5 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://via.placeholder.com/45x45/FF6B6B/FFFFFF?text=夜市" alt="饒河夜市 Logo" height="45"
+          class="me-2 rounded">
+        <span class="fw-bold fs-4">瑞豐夜市</span>
+      </a>
+
+      <!-- 手機漢堡 -->
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarContent">
+        <i class="fas fa-bars text-warning"></i>
+      </button>
+
+      <!-- 選單與右側功能 -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">首頁</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stalls">美食攤位</a></li>
+          <li class="nav-item"><a class="nav-link" href="#map">夜市地圖</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">最新活動</a></li>
+          <li class="nav-item"><a class="nav-link" href="#member">會員中心</a></li>
+        </ul>
+
+        <!-- 右側功能區 -->
+        <ul class="navbar-nav align-items-center">
+          <!-- 語言切換 -->
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link dropdown-toggle text-light" href="#" data-mdb-toggle="dropdown">
+              <i class="fas fa-globe me-1"></i>中文
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">中文</a></li>
+              <li><a class="dropdown-item" href="#">English</a></li>
+            </ul>
+          </li>
+
+          <!-- 登入按鈕（改用 button！最穩定） -->
+          <li class="nav-item me-3">
+            <button class="btn btn-outline-light btn-sm" type="button" data-mdb-toggle="modal"
+              data-mdb-target="#loginModal">
+              <i class="fas fa-user-circle me-1"></i>登入
+            </button>
+          </li>
+
+          <!-- 會員點數 -->
+          <li class="nav-item me-3">
+            <a class="nav-link text-warning" href="#member">
+              <i class="fas fa-coins fa-lg me-1"></i>
+              <span class="badge bg-primary rounded-pill">000 點</span>
+            </a>
+          </li>
+
+          <!-- 購物車 -->
+          <li class="nav-item">
+            <a class="nav-link position-relative text-light" href="#cart">
+              <i class="fas fa-shopping-cart fa-lg"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                3
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 登入 Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-light border-0">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="loginModalLabel">會員登入</h5>
+          <button type="button" class="btn-close btn-close-white" data-mdb-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email 或手機</label>
+              <input type="text" class="form-control bg-secondary text-light border-secondary"
+                placeholder="example@email.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">密碼</label>
+              <input type="password" class="form-control bg-secondary text-light border-secondary">
+            </div>
+            <div class="d-grid">
+              <button type="button" class="btn btn-warning btn-lg mb-3" data-mdb-dismiss="modal">
+                立即登入
+              </button>
+            </div>
+            <div class="text-center">
+              <a href="#" class="text-warning me-3">忘記密碼？</a>
+              <a href="#" class="text-warning">註冊新會員</a>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-    <!-- End your project here-->
+  </div>
+
+  <!-- MDB JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 
   <!-- MDB ESSENTIAL -->
