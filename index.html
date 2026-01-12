@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
     />
     <!-- MDB ESSENTIAL -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="src/mdb/scss/mdb.pro.css" />
     <!-- MDB PLUGINS -->
     <link rel="stylesheet" href="plugins/css/all.min.css" />
     <!-- Custom styles -->
@@ -34,135 +34,728 @@
 
 
 
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#0f172a;">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
 
-<!DOCTYPE html>
-<html lang="zh-TW">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>瑞豐夜市 - 線上點餐</title>
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">瑞豐夜市線上點餐</a>
 
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <!-- MDBootstrap 5 CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet">
-</head>
 
-<body class="bg-dark text-light">
+    <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-    <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="https://via.placeholder.com/45x45/FF6B6B/FFFFFF?text=夜市" alt="饒河夜市 Logo" height="45"
-          class="me-2 rounded">
-        <span class="fw-bold fs-4">瑞豐夜市</span>
-      </a>
 
-      <!-- 手機漢堡 -->
-      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarContent">
-        <i class="fas fa-bars text-warning"></i>
-      </button>
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-      <!-- 選單與右側功能 -->
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#">首頁</a></li>
-          <li class="nav-item"><a class="nav-link" href="#stalls">美食攤位</a></li>
-          <li class="nav-item"><a class="nav-link" href="#map">夜市地圖</a></li>
-          <li class="nav-item"><a class="nav-link" href="#events">最新活動</a></li>
-          <li class="nav-item"><a class="nav-link" href="#member">會員中心</a></li>
-        </ul>
 
-        <!-- 右側功能區 -->
-        <ul class="navbar-nav align-items-center">
-          <!-- 語言切換 -->
-          <li class="nav-item dropdown me-3">
-            <a class="nav-link dropdown-toggle text-light" href="#" data-mdb-toggle="dropdown">
-              <i class="fas fa-globe me-1"></i>中文
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">中文</a></li>
-              <li><a class="dropdown-item" href="#">English</a></li>
-            </ul>
-          </li>
+        <!-- Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">夜市地圖</a>
+        </li>
 
-          <!-- 登入按鈕（改用 button！最穩定） -->
-          <li class="nav-item me-3">
-            <button class="btn btn-outline-light btn-sm" type="button" data-mdb-toggle="modal"
-              data-mdb-target="#loginModal">
-              <i class="fas fa-user-circle me-1"></i>登入
-            </button>
-          </li>
 
-          <!-- 會員點數 -->
-          <li class="nav-item me-3">
-            <a class="nav-link text-warning" href="#member">
-              <i class="fas fa-coins fa-lg me-1"></i>
-              <span class="badge bg-primary rounded-pill">000 點</span>
-            </a>
-          </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
+            aria-expanded="false">
+            各項工具
+          </a>
+          <!-- Dropdown menu -->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="#">會員資訊</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">最新活動</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">回到首頁</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
-          <!-- 購物車 -->
-          <li class="nav-item">
-            <a class="nav-link position-relative text-light" href="#cart">
-              <i class="fas fa-shopping-cart fa-lg"></i>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                3
-              </span>
-            </a>
-          </li>
-        </ul>
+
+      <script src="https://cdn.jsdelivr.net/npm/mdb-ui-kit/js/mdb.min.js"></script>
+
+
+      <!-- Icons -->
+      <ul class="navbar-nav d-flex flex-row me-1">
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <li class="nav-link" href="#"><i class="fas fa-coins"></i>
+        </li>
+      </ul>
+
+        <li class="nav-item ms-3 me-4 me-lg-0 fa-2x">
+          <a class="nav-link" href="#"><i class="fas fa-user-circle"></i></a>
+        </li>
+
+
+
+    </div>
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Carousel wrapper -->
+<div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel" data-mdb-carousel-init>
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- Inner -->
+  <div class="carousel-inner">
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" class="d-block w-100"
+        alt="Sunset Over the City" />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>線上點餐</h5>
+        <p>內文</p>
       </div>
     </div>
-  </nav>
 
-  <!-- 登入 Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-light border-0">
-        <div class="modal-header border-0">
-          <h5 class="modal-title" id="loginModalLabel">會員登入</h5>
-          <button type="button" class="btn-close btn-close-white" data-mdb-dismiss="modal"></button>
-        </div>
-        <div class="modal-body p-4">
-          <form>
-            <div class="mb-3">
-              <label class="form-label">Email 或手機</label>
-              <input type="text" class="form-control bg-secondary text-light border-secondary"
-                placeholder="example@email.com">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">密碼</label>
-              <input type="password" class="form-control bg-secondary text-light border-secondary">
-            </div>
-            <div class="d-grid">
-              <button type="button" class="btn btn-warning btn-lg mb-3" data-mdb-dismiss="modal">
-                立即登入
-              </button>
-            </div>
-            <div class="text-center">
-              <a href="#" class="text-warning me-3">忘記密碼？</a>
-              <a href="#" class="text-warning">註冊新會員</a>
-            </div>
-          </form>
-        </div>
+    <!-- Single item -->
+    <div class="carousel-item">
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp" class="d-block w-100"
+        alt="Canyon at Nigh" />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>點數回饋</h5>
+        <p>內文</p>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp" class="d-block w-100"
+        alt="Cliff Above a Stormy Sea" />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>標題3</h5>
+        <p>內文</p>
       </div>
     </div>
   </div>
+  <!-- Inner -->
 
-  <!-- MDB JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- Carousel wrapper -->
 
-</body>
-
-</html>
 
 
 
 
+
+
+
+
+
+
+<!-- Container for demo purpose -->
+<div class="container my-5 py-5">
+
+  <!-- Section: Design Block -->
+  <section class="mb-8">
+    <div class="row gx-xl-5 justify-content-center">
+      <div class="col-lg-4 col-6 mb-4 mb-xl-0">
+        <!-- Product card -->
+        <div>
+          <!-- Product image -->
+          <div
+               class="
+                      bg-image
+                      shadow-4-soft
+                      rounded-6
+                      mb-4
+                      overflow-hidden
+                      d-block
+                      "
+                      data-mdb-ripple-init data-ripple-color="light"
+               >
+            <img
+                 src="https://mdbootstrap.com/img/new/ecommerce/horizontal/085.jpg"
+                 class="w-100"
+                 alt=""
+                 />
+            <a href="#!">
+              <div class="mask">
+                <div
+                     class="
+                            d-flex
+                            justify-content-start
+                            align-items-end
+                            h-100
+                            p-3
+                            "
+                     >
+                  <span class="badge badge-danger rounded-pill me-2"
+                        >-15%</span
+                    >
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div
+                     class="mask"
+                     style="background-color: hsla(0, 0%, 98.4%, 0.15)"
+                     ></div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Product content -->
+          <div class="px-3 text-reset d-block">
+            <p class="fw-bold mb-2">店家名稱</p>
+            <p class="text-muted mb-2">Nuts</p>
+            <ul
+                class="rating mb-2"
+                data-mdb-rating-init
+                data-mdb-readonly="true"
+                data-mdb-value="4"
+                >
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary ps-0"
+                   title="Bad"
+                   ></i>
+              </li>
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary"
+                   title="Poor"
+                   ></i>
+              </li>
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary"
+                   title="OK"
+                   ></i>
+              </li>
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary"
+                   title="Good"
+                   ></i>
+              </li>
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary"
+                   title="Excellent"
+                   ></i>
+              </li>
+            </ul>
+            <h5 class="mb-3">
+              <span class="align-middle">$000 - 000</span>
+            </h5>
+            <button
+                    type="button"
+                    class="btn btn-primary btn-rounded w-100" data-mdb-ripple-init
+                    >
+              <i class="fas fa-cart-plus me-2"></i>Add to cart
+            </button>
+          </div>
+          <!-- Product content -->
+        </div>
+        <!-- Product card -->
+      </div>
+
+      <div class="col-lg-4 col-6 mb-4 mb-lg-0">
+        <!-- Product card -->
+        <div>
+          <!-- Product image -->
+          <div
+               class="
+                      bg-image
+                      shadow-4-soft
+                      rounded-6
+                      mb-4
+                      overflow-hidden
+                      d-block
+                      "
+                      data-mdb-ripple-init data-ripple-color="light"
+               >
+            <img
+                 src="https://mdbootstrap.com/img/new/ecommerce/horizontal/084.jpg"
+                 class="w-100"
+                 alt=""
+                 />
+            <a href="#!">
+              <div class="mask">
+                <div
+                     class="
+                            d-flex
+                            justify-content-start
+                            align-items-end
+                            h-100
+                            p-3
+                            "
+                     >
+                  <span class="badge badge-primary rounded-pill me-2"
+                        >New</span
+                    >
+                  <span class="badge badge-success rounded-pill"
+                        >Eco</span
+                    >
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div
+                     class="mask"
+                     style="background-color: hsla(0, 0%, 98.4%, 0.15)"
+                     ></div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Product content -->
+          <div class="px-3 text-reset d-block">
+            <p class="fw-bold mb-2">店家名稱</p>
+            <p class="text-muted mb-2">Fruits</p>
+            <ul
+                class="rating mb-2"
+                data-mdb-rating-init
+                data-mdb-readonly="true"
+                data-mdb-value="5"
+                >
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary ps-0"
+                   title="Bad"
+                   ></i>
+              </li>
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary"
+                   title="Poor"
+                   ></i>
+              </li>
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary"
+                   title="OK"
+                   ></i>
+              </li>
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary"
+                   title="Good"
+                   ></i>
+              </li>
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary"
+                   title="Excellent"
+                   ></i>
+              </li>
+            </ul>
+            <h5 class="mb-3">
+              <span class="align-middle">$000 - 000</span>
+            </h5>
+            <button
+                    type="button"
+                    class="btn btn-primary btn-rounded w-100" data-mdb-ripple-init
+                    >
+              <i class="fas fa-cart-plus me-2"></i>Add to cart
+            </button>
+          </div>
+          <!-- Product content -->
+        </div>
+        <!-- Product card -->
+      </div>
+
+      <div class="col-lg-4 col-6 mb-4 mb-lg-0">
+        <!-- Product card -->
+        <div>
+          <!-- Product image -->
+          <div
+               class="
+                      bg-image
+                      shadow-4-soft
+                      rounded-6
+                      mb-4
+                      overflow-hidden
+                      d-block
+                      "
+                      data-mdb-ripple-init data-ripple-color="light"
+               >
+            <img
+                 src="https://mdbootstrap.com/img/new/ecommerce/horizontal/086.jpg"
+                 class="w-100"
+                 alt=""
+                 />
+            <a href="#!">
+              <div class="mask">
+                <div
+                     class="
+                            d-flex
+                            justify-content-start
+                            align-items-end
+                            h-100
+                            p-3
+                            "
+                     ></div>
+              </div>
+              <div class="hover-overlay">
+                <div
+                     class="mask"
+                     style="background-color: hsla(0, 0%, 98.4%, 0.15)"
+                     ></div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Product content -->
+          <div class="px-3 text-reset d-block">
+            <p class="fw-bold mb-2">店家名稱</p>
+            <p class="text-muted mb-2">Vegetables</p>
+            <ul
+                class="rating mb-2"
+                data-mdb-rating-init
+                data-mdb-readonly="true"
+                data-mdb-value="4"
+                >
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary ps-0"
+                   title="Bad"
+                   ></i>
+              </li>
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary"
+                   title="Poor"
+                   ></i>
+              </li>
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary"
+                   title="OK"
+                   ></i>
+              </li>
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary"
+                   title="Good"
+                   ></i>
+              </li>
+              <li>
+                <i
+                   class="far fa-star fa-sm text-primary"
+                   title="Excellent"
+                   ></i>
+              </li>
+            </ul>
+            <h5 class="mb-3">
+              <span class="align-middle">$000 - 000</span>
+            </h5>
+
+            <button
+                    type="button"
+                    class="btn btn-primary btn-rounded w-100" data-mdb-ripple-init
+                    >
+              <i class="fas fa-cart-plus me-2"></i>Add to cart
+            </button>
+          </div>
+          <!-- Product content -->
+        </div>
+        <!-- Product card -->
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+
+</div>
+<!-- Container for demo purpose -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Container for demo purpose -->
+<div class="container my-5">
+
+  <!--Section: Design Block-->
+  <section class="mb-10">
+
+    <div class="d-flex justify-content-between align-items-center align-items-xl-end border-bottom pb-4 mb-5"
+      style="border-bottom: 2px solid #f5f5f5 !important;">
+      <h2 class="fw-bold mb-0">訂單追蹤</h2>
+    </div>
+    <div class="row gx-md-5">
+      <div class="col-md-12 col-lg-4">
+        <div class="mb-5 text-center">
+          <div class="bg-image hover-overlay hover-zoom rounded-5 mb-4" data-mdb-ripple-init
+            data-mdb-ripple-color="light">
+        <li class="nav-item ms-3 me-4 me-lg-0 fa-10x">
+          <a class="nav-link" href="#"><i class="fas fa-clipboard-check"></i></i></i></a>
+        </li>
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(255,255,255,0.1);"></div>
+            </a>
+          </div>
+          <h5 class="fw-bold mb-3"><a href="#!" class="text-reset">確認訂單</a></h5>
+          <h6 class="text-muted text-uppercase small pb-1"><a href="#!" class="text-reset">店家將於確認後送出</a></h6>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-4">
+        <div class="mb-5 text-center">
+          <div class="bg-image hover-overlay hover-zoom rounded-5 mb-4" data-mdb-ripple-init
+            data-mdb-ripple-color="light">
+        <li class="nav-item ms-3 me-4 me-lg-0 fa-10x">
+          <a class="nav-link" href="#"><i class="fas fa-clock-rotate-left"></i></i></a>
+        </li>
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(255,255,255,0.1);"></div>
+            </a>
+          </div>
+          <h5 class="fw-bold mb-3"><a href="#!" class="text-reset">製作中</a></h5>
+          <h6 class="text-muted text-uppercase small pb-1"><a href="#!" class="text-reset">餐點正在製作中</a></h6>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-4">
+        <div class="mb-5 text-center">
+          <div class="bg-image hover-overlay hover-zoom rounded-5 mb-4" data-mdb-ripple-init
+            data-mdb-ripple-color="light">
+        <li class="nav-item ms-3 me-4 me-lg-0 fa-10x">
+          <a class="nav-link" href="#"><i class="fas fa-utensils"></i></i></a>
+        </li>
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(255,255,255,0.1);"></div>
+            </a>
+          </div>
+          <h5 class="fw-bold mb-3"><a href="#!" class="text-reset">等待取餐</a></h5>
+          <h6 class="text-muted text-uppercase small pb-1"><a href="#!" class="text-reset">餐點已完成等待取餐</a></h6>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--Section: Design Block-->
+
+</div>
+<!-- Container for demo purpose -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-3">
+      <div class="card">
+  <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
+    <a href="#!">
+      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">店家名稱</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="d-flex justify-content-center">
+  <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
+</div>
+  </div>
+</div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <div class="card">
+  <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
+    <a href="#!">
+      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">店家名稱</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="d-flex justify-content-center">
+  <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
+</div>
+  </div>
+</div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <div class="card">
+  <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
+    <a href="#!">
+      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">店家名稱</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="d-flex justify-content-center">
+  <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
+</div>
+  </div>
+</div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <div class="card">
+  <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
+    <a href="#!">
+      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">店家名稱</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="d-flex justify-content-center">
+  <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
+</div>
+  </div>
+</div>
+    </div>
+  </div><!-- Row -->
+</div><!--Container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class=" text-center text-white" style="background-color:#0f172a;">
+  <!-- Grid container -->
+  <div class="container p-4">
+
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i
+          class="fab fa-facebook-f"></i></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i
+          class="fab fa-twitter"></i></a>
+
+      <!-- Google -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i
+          class="fab fa-google"></i></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i
+          class="fab fa-instagram"></i></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i
+          class="fab fa-linkedin-in"></i></a>
+      <!-- Github -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i
+          class="fab fa-github"></i></a>
+    </section>
+    <!-- Section: Social media -->
+
+
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+        distinctio earum repellat quaerat voluptatibus placeat nam,
+        commodi optio pariatur est quia magnam eum harum corrupti dicta,
+        aliquam sequi voluptate quas.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
 
 
