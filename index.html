@@ -77,27 +77,22 @@
         </ul>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/mdb-ui-kit/js/mdb.min.js"></script>
-
-
         <!-- Icons -->
-        <ul class="navbar-nav d-flex flex-row me-1">
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#top"><i class="fas fa-house"></i></i></a>
+      <ul class="navbar-nav d-flex flex-row me-1">
+          <li class="nav-item me-3 me-lg-0 fa-lg">
+            <a class="nav-link" href="#top"><i class="fas fa-house"></i></a>
           </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#shopcar"><i class="fas fa-shopping-cart"></i></a>
+          <li class="nav-item me-3 me-lg-0 fa-lg">
+            <a class="nav-link" href="#" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#shopcarModal"><i class="fas fa-shopping-cart"></i></a>
           </li>
-          <li class="nav-item me-3 me-lg-0">
-          <li class="nav-link" href="#"><i class="fas fa-coins"></i>
+          <li class="nav-item me-3 me-lg-0 fa-lg">
+          <a class="nav-link" href="#points"><i class="fas fa-coins"></i></a>
           </li>
-        </ul>
-
-        <li class="nav-item ms-3 me-4 me-lg-0 fa-2x">
+          <li class="nav-item ms-3 me-4 me-lg-0 fa-lg">
           <a class="nav-link" href="#" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#loginModal">
-            <i class="fas fa-user-circle"></i></a>
+          <i class="fas fa-user-circle"></i></a>
         </li>
-
+      </ul>
 
 
       </div>
@@ -189,6 +184,10 @@
 
     <!-- Section: Design Block -->
     <section class="mb-8">
+      <div class="d-flex justify-content-between align-items-center align-items-xl-end border-bottom pb-4 mb-5"
+        style="border-bottom: 2px solid #f5f5f5 !important;">
+        <h2 class="fw-bold mb-0">商品總覽</h2>
+      </div>
       <div class="row gx-xl-5 justify-content-center">
         <div class="col-lg-4 col-6 mb-4 mb-xl-0">
           <!-- Product card -->
@@ -225,7 +224,7 @@
             <!-- Product content -->
             <div class="px-3 text-reset d-block">
               <p class="fw-bold mb-2">店家名稱</p>
-              <p class="text-muted mb-2">Nuts</p>
+              <p class="text-muted mb-2">營業中</p>
               <ul class="rating mb-2" data-mdb-rating-init data-mdb-readonly="true" data-mdb-value="4">
                 <li>
                   <i class="far fa-star fa-sm text-primary ps-0" title="Bad"></i>
@@ -289,7 +288,7 @@
             <!-- Product content -->
             <div class="px-3 text-reset d-block">
               <p class="fw-bold mb-2">店家名稱</p>
-              <p class="text-muted mb-2">Fruits</p>
+              <p class="text-muted mb-2">營業中</p>
               <ul class="rating mb-2" data-mdb-rating-init data-mdb-readonly="true" data-mdb-value="5">
                 <li>
                   <i class="far fa-star fa-sm text-primary ps-0" title="Bad"></i>
@@ -351,7 +350,7 @@
             <!-- Product content -->
             <div class="px-3 text-reset d-block">
               <p class="fw-bold mb-2">店家名稱</p>
-              <p class="text-muted mb-2">Vegetables</p>
+              <p class="text-muted mb-2">歇業中</p>
               <ul class="rating mb-2" data-mdb-rating-init data-mdb-readonly="true" data-mdb-value="4">
                 <li>
                   <i class="far fa-star fa-sm text-primary ps-0" title="Bad"></i>
@@ -399,99 +398,7 @@
 
 
 
-  <!-- Container for demo purpose shopcar -->
-  <div class="container my-5 py-5">
 
-    <!--Section: Design Block-->
-    <section class="mb-10">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <section id="shopcar" class="mb-10"></section>
-          <h5 class="mb-4">購物車</h5>
-          <hr />
-          <div class="d-md-flex justify-content-between mt-4 pt-1 mb-5">
-            <div class="d-flex mb-4 mb-md-0">
-              <div class="flex-shrink-0">
-                <a href="#!">
-                  <img class="rounded-5 shadow-4 h-auto"
-                    src="https://mdbootstrap.com/img/Photos/new-design-blocks/ecommerce/checkout/6.jpg"
-                    alt="Generic placeholder image" style="width: 120px" />
-                </a>
-              </div>
-              <div class="flex-grow-1 ms-4">
-                <p class="mb-1">
-                  <strong><a href="#!" class="text-reset">JOIN Wilde Perfume Stick</a></strong>
-                </p>
-                <p class="mb-1">€59,00</p>
-                <p class="text-muted mb-1">Vanilla, rose</p>
-                <p class="text-muted mb-1">30 ml / 1 fl oz</p>
-              </div>
-            </div>
-            <div>
-              <div class="form-outline mb-2" data-mdb-input-init style="width: 75px;">
-                <input type="number" id="typeNumber" class="form-control" value="1" min="1" />
-                <label class="form-label" for="typeNumber">Quantity</label>
-              </div>
-              <p class="pt-1"><a href="#!">Remove</a></p>
-            </div>
-            <div>
-              <p>€59,00</p>
-            </div>
-          </div>
-          <div class="d-md-flex justify-content-between mb-5">
-            <div class="d-flex mb-4 mb-md-0">
-              <div class="flex-shrink-0">
-                <a href="#!">
-                  <img class="rounded-5 shadow-4 h-auto"
-                    src="https://mdbootstrap.com/img/Photos/new-design-blocks/ecommerce/checkout/5.jpg"
-                    alt="Generic placeholder image" style="width: 120px" />
-                </a>
-              </div>
-              <div class="flex-grow-1 ms-4">
-                <p class="mb-1">
-                  <strong><a href="#!" class="text-reset">Nécessaire The Deodorant</a></strong>
-                </p>
-                <p class="mb-1">€39,00</p>
-                <p class="text-muted mb-1">Eucalyptus</p>
-                <p class="text-muted mb-1">50 ml / 1.7 fl oz</p>
-              </div>
-            </div>
-            <div>
-              <div class="form-outline mb-2" data-mdb-input-init style="width: 75px;">
-                <input type="number" id="typeNumber" class="form-control" value="2" min="1" />
-                <label class="form-label" for="typeNumber">Quantity</label>
-              </div>
-              <p class="pt-1"><a href="#!">Remove</a></p>
-            </div>
-            <div>
-              <p>€78,00</p>
-            </div>
-          </div>
-          <hr />
-          <div class="d-flex justify-content-end text-end mt-5">
-            <div>
-              <p class="fs-5">Subtotal <span class="ms-3">€137,00 EUR</span></p>
-              <p class="text-muted small mb-4">
-                Taxes and <a class="#!">shipping</a> calculated at checkout
-              </p>
-              <div>
-                <button type="button" class="btn btn-link mb-1 mb-md-0" data-mdb-ripple-init
-                  data-mdb-ripple-color="dark">
-                  Continue shopping
-                </button>
-                <button type="button" class="btn btn-primary ms-md-1 mb-1 mb-md-0"
-                  data-mdb-ripple-init>Checkout</button>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-  </div>
-  </section>
-  <!--Section: Design Block-->
-
-  </div>
-  <!-- Container for demo purpose shopcar -->
 
 
 
@@ -522,9 +429,9 @@
           <div class="mb-5 text-center">
             <div class="bg-image hover-overlay hover-zoom rounded-5 mb-4" data-mdb-ripple-init
               data-mdb-ripple-color="light">
-              <li class="nav-item ms-3 me-4 me-lg-0 fa-10x">
+              <div class="nav-item ms-3 me-4 me-lg-0 fa-10x">
                 <a class="nav-link" href="#"><i class="fas fa-clipboard-check"></i></i></i></a>
-              </li>
+              </div>
               <a href="#!">
                 <div class="mask" style="background-color: rgba(255,255,255,0.1);"></div>
               </a>
@@ -537,9 +444,9 @@
           <div class="mb-5 text-center">
             <div class="bg-image hover-overlay hover-zoom rounded-5 mb-4" data-mdb-ripple-init
               data-mdb-ripple-color="light">
-              <li class="nav-item ms-3 me-4 me-lg-0 fa-10x">
+              <div class="nav-item ms-3 me-4 me-lg-0 fa-10x">
                 <a class="nav-link" href="#"><i class="fas fa-clock-rotate-left"></i></i></a>
-              </li>
+              </div>
               <a href="#!">
                 <div class="mask" style="background-color: rgba(255,255,255,0.1);"></div>
               </a>
@@ -552,9 +459,9 @@
           <div class="mb-5 text-center">
             <div class="bg-image hover-overlay hover-zoom rounded-5 mb-4" data-mdb-ripple-init
               data-mdb-ripple-color="light">
-              <li class="nav-item ms-3 me-4 me-lg-0 fa-10x">
+              <div class="nav-item ms-3 me-4 me-lg-0 fa-10x">
                 <a class="nav-link" href="#"><i class="fas fa-utensils"></i></i></a>
-              </li>
+              </div>
               <a href="#!">
                 <div class="mask" style="background-color: rgba(255,255,255,0.1);"></div>
               </a>
@@ -617,10 +524,14 @@
 
 
 
-  <div class="container">
+  <div class="container" id="points">
     <div class="row">
+      <div class="d-flex justify-content-between align-items-center align-items-xl-end border-bottom pb-4 mb-5"
+        style="border-bottom: 2px solid #f5f5f5 !important;">
+        <h2 class="fw-bold mb-0">點數兌換區</h2>
+      </div>
       <div class="col-xs-12 col-sm-3">
-        <div class="card">
+          <div class="card">
           <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
             <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
             <a href="#!">
@@ -628,11 +539,10 @@
             </a>
           </div>
           <div class="card-body">
-            <h5 class="card-title">店家名稱</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+            <h5 class="card-title text-center">店家名稱</h5>
+            <p class="card-text text-center">000點</p>
             <div class="d-flex justify-content-center">
-              <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
+              <a href="#!" class="btn btn-primary" data-mdb-ripple-init>兌換</a>
             </div>
           </div>
         </div>
@@ -646,11 +556,10 @@
             </a>
           </div>
           <div class="card-body">
-            <h5 class="card-title">店家名稱</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+            <h5 class="card-title text-center">店家名稱</h5>
+            <p class="card-text text-center">000點</p>
             <div class="d-flex justify-content-center">
-              <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
+              <a href="#!" class="btn btn-primary" data-mdb-ripple-init>兌換</a>
             </div>
           </div>
         </div>
@@ -664,11 +573,10 @@
             </a>
           </div>
           <div class="card-body">
-            <h5 class="card-title">店家名稱</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+            <h5 class="card-title text-center">店家名稱</h5>
+            <p class="card-text text-center">000點</p>
             <div class="d-flex justify-content-center">
-              <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
+              <a href="#!" class="btn btn-primary" data-mdb-ripple-init>兌換</a>
             </div>
           </div>
         </div>
@@ -682,11 +590,10 @@
             </a>
           </div>
           <div class="card-body">
-            <h5 class="card-title">店家名稱</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+            <h5 class="card-title text-center">店家名稱</h5>
+            <p class="card-text text-center">000點</p>
             <div class="d-flex justify-content-center">
-              <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
+              <a href="#!" class="btn btn-primary" data-mdb-ripple-init>兌換</a>
             </div>
           </div>
         </div>
@@ -912,6 +819,141 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="modal fade" id="shopcarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+  <!-- Container for demo purpose shopcar -->
+  <div class="container">
+
+    <!--Section: Design Block-->
+    <section class="mb-10">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h5 class="mb-4">購物車</h5>
+          <hr />
+          <div class="d-md-flex justify-content-between mt-4 pt-1 mb-5">
+            <div class="d-flex mb-4 mb-md-0">
+              <div class="flex-shrink-0">
+                <a href="#!">
+                  <img class="rounded-5 shadow-4 h-auto"
+                    src="https://mdbootstrap.com/img/Photos/new-design-blocks/ecommerce/checkout/6.jpg"
+                    alt="Generic placeholder image" style="width: 120px" />
+                </a>
+              </div>
+              <div class="flex-grow-1 ms-4">
+                <p class="mb-1">
+                  <strong><a href="#!" class="text-reset">JOIN Wilde Perfume Stick</a></strong>
+                </p>
+                <p class="mb-1">€59,00</p>
+                <p class="text-muted mb-1">Vanilla, rose</p>
+                <p class="text-muted mb-1">30 ml / 1 fl oz</p>
+              </div>
+            </div>
+            <div>
+              <div class="form-outline mb-2" data-mdb-input-init style="width: 75px;">
+                <input type="number" id="typeNumber" class="form-control" value="1" min="1" />
+                <label class="form-label" for="typeNumber">Quantity</label>
+              </div>
+              <p class="pt-1"><a href="#!">Remove</a></p>
+            </div>
+            <div>
+              <p>€59,00</p>
+            </div>
+          </div>
+          <div class="d-md-flex justify-content-between mb-5">
+            <div class="d-flex mb-4 mb-md-0">
+              <div class="flex-shrink-0">
+                <a href="#!">
+                  <img class="rounded-5 shadow-4 h-auto"
+                    src="https://mdbootstrap.com/img/Photos/new-design-blocks/ecommerce/checkout/5.jpg"
+                    alt="Generic placeholder image" style="width: 120px" />
+                </a>
+              </div>
+              <div class="flex-grow-1 ms-4">
+                <p class="mb-1">
+                  <strong><a href="#!" class="text-reset">Nécessaire The Deodorant</a></strong>
+                </p>
+                <p class="mb-1">€39,00</p>
+                <p class="text-muted mb-1">Eucalyptus</p>
+                <p class="text-muted mb-1">50 ml / 1.7 fl oz</p>
+              </div>
+            </div>
+            <div>
+              <div class="form-outline mb-2" data-mdb-input-init style="width: 75px;">
+                <input type="number" id="typeNumber" class="form-control" value="2" min="1" />
+                <label class="form-label" for="typeNumber">Quantity</label>
+              </div>
+              <p class="pt-1"><a href="#!">Remove</a></p>
+            </div>
+            <div>
+              <p>€78,00</p>
+            </div>
+          </div>
+          <hr />
+          <div class="d-flex justify-content-end text-end mt-5">
+            <div>
+              <p class="fs-5">總花費 <span class="ms-3">€137,00 EUR</span></p>
+              <p class="text-muted small mb-4">
+                Taxes and <a class="#!">shipping</a> 手續費將於結帳時添加
+              </p>
+              <div>
+                <button type="button" class="btn btn-link mb-1 mb-md-0" data-mdb-ripple-init
+                  data-mdb-ripple-color="dark">
+                 關閉
+                </button>
+                <button type="button" class="btn btn-primary ms-md-1 mb-1 mb-md-0"
+                  data-mdb-ripple-init>結帳</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  </section>
+  <!--Section: Design Block-->
+
+  </div>
+  <!-- Container for demo purpose shopcar -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mdb-ui-kit@6.4.2/js/mdb.min.js"></script>
 
 
 </body>
