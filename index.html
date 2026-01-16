@@ -573,8 +573,13 @@
       <div class="col-xs-12 col-sm-3">
           <div class="card">
           <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
-            <a href="#!">
+                        <div class="card-img-top bg-image" 
+                      style="height: 225px; 
+                        background-image: url('img/50.png'); 
+                        background-size: cover; 
+                        background-position: center;">
+                        </div>             
+                <a href="#!">
               <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
             </a>
           </div>
@@ -583,7 +588,7 @@
               <div class="mx-auto my-2" style="width: 70%; height: 1px; background-color: #e5e7eb;"></div>
             <p class="card-text text-center">150點</p>
             <div class="d-flex justify-content-center">
-              <a href="#!" class="btn btn-success" data-mdb-ripple-init>兌換</a>
+              <a href="#!" class="btn btn-success" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#success" data-mdb-ripple-init>兌換</a>
             </div>
           </div>
         </div>
@@ -591,8 +596,13 @@
       <div class="col-xs-12 col-sm-3">
         <div class="card">
           <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
-            <a href="#!">
+                        <div class="card-img-top bg-image" 
+                      style="height: 225px; 
+                        background-image: url('img/100.png'); 
+                        background-size: cover; 
+                        background-position: center;">
+                        </div>             
+                <a href="#!">
               <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
             </a>
           </div>
@@ -601,7 +611,7 @@
               <div class="mx-auto my-2" style="width: 70%; height: 1px; background-color: #e5e7eb;"></div>
             <p class="card-text text-center">280點</p>
             <div class="d-flex justify-content-center">
-              <a href="#!" class="btn btn-success" data-mdb-ripple-init>兌換</a>
+              <a href="#!" class="btn btn-success" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#success" data-mdb-ripple-init>兌換</a>
             </div>
           </div>
         </div>
@@ -609,8 +619,13 @@
       <div class="col-xs-12 col-sm-3">
         <div class="card">
           <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
-            <a href="#!">
+                        <div class="card-img-top bg-image" 
+                      style="height: 225px; 
+                        background-image: url('img/3.png'); 
+                        background-size: cover; 
+                        background-position: center;">
+                        </div> 
+                <a href="#!">
               <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
             </a>
           </div>
@@ -619,7 +634,7 @@
               <div class="mx-auto my-2" style="width: 70%; height: 1px; background-color: #e5e7eb;"></div>
             <p class="card-text text-center">100點</p>
             <div class="d-flex justify-content-center">
-              <a href="#!" class="btn btn-success" data-mdb-ripple-init>兌換</a>
+              <a href="#!" class="btn btn-success" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#success" data-mdb-ripple-init>兌換</a>
             </div>
           </div>
         </div>
@@ -627,8 +642,13 @@
       <div class="col-xs-12 col-sm-3">
         <div class="card">
           <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
-            <a href="#!">
+                        <div class="card-img-top bg-image" 
+                      style="height: 225px; 
+                        background-image: url('img/drink.png'); 
+                        background-size: cover; 
+                        background-position: center;">
+                        </div> 
+                <a href="#!">
               <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
             </a>
           </div>
@@ -637,7 +657,7 @@
               <div class="mx-auto my-2" style="width: 70%; height: 1px; background-color: #e5e7eb;"></div>
             <p class="card-text text-center">70點</p>
             <div class="d-flex justify-content-center">
-              <a href="#!" class="btn btn-success" data-mdb-ripple-init>兌換</a>
+              <a href="#!" class="btn btn-success" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#success" data-mdb-ripple-init>兌換</a>
             </div>
           </div>
         </div>
@@ -1093,7 +1113,26 @@
 
 
 
-
+  <div class="modal fade" id="success" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+<!-- Container for demo purpose -->
+<div class="container my-5 py-5 shadow-5">
+  <section>
+    <h3 class="text-center mb-5">兌換成功</h3>
+    <div class="text-center">
+    <button type="button" class="btn btn-link mb-1 mb-md-0 fa-2x" data-mdb-dismiss="modal" data-mdb-ripple-init
+    data-mdb-ripple-color="dark">關閉
+    </button>
+    </div>
+    </section>
+</div>
+<!-- Container for demo purpose -->
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
